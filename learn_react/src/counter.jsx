@@ -12,9 +12,7 @@ function Counter() {
     // setCounter(counter + 1);
     // only increment by one because change happen in batches
     // so react find it is same and run only one time
-
     // solution
-    
     //  you may pass an updater function
     // setCounter((prevCounter) => prevCounter + 1);
     // setCounter((prevCounter) => prevCounter + 1);

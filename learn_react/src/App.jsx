@@ -1,6 +1,7 @@
-// import { useState } from "react";
+import { useState } from "react";
 import Card from "./components/Card";
-// import Counter from "./counter";
+import PasswordGenerator from "./components/PasswordGenerator";
+import Counter from "./counter";
 
 function App() {
   // const username = "venom"
@@ -27,8 +28,10 @@ function App() {
 
       {/* <Counter /> */}
 
-      <Card username="Dodge" btnText="click me" />
-      <Card username="Venom" />
+      {/* <Card username="Dodge" btnText="click me" />
+      <Card username="Venom" /> */}
+
+      {/* <PasswordGenerator /> */}
     </>
   );
 }
