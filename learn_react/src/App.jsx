@@ -1,15 +1,17 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Card from "./components/Card";
+// import Counter from "./counter";
 
 function App() {
   // const username = "venom"
 
-  const [count, setCount] = useState(0);
-  let myObj = {
-    username: "f5",
-    age: 20,
-  };
-  let newArr = [1, 2, 3];
+  // const [count, setCount] = useState(0);
+
+  // let myObj = {
+  //   username: "f5",
+  //   age: 20,
+  // };
+  // let newArr = [1, 2, 3];
 
   return (
     <>
@@ -22,6 +24,8 @@ function App() {
 
       {/* <Card someobj={myObj} somearr={newArr} /> */}
       {/* you can not pass directly array and object as a props  */}
+
+      {/* <Counter /> */}
 
       <Card username="Dodge" btnText="click me" />
       <Card username="Venom" />
