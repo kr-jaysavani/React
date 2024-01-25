@@ -18,6 +18,7 @@ function App() {
 
   return (
     <>
+      {/* remember to change in tailwind.config */}
       <ThemeProvider value={{ themeMode, changeTheme }}>
         <div className="flex flex-wrap min-h-screen items-center">
           <div className="w-full">
