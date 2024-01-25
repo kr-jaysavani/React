@@ -2,8 +2,11 @@ import { useState } from "react";
 import Card from "./components/Card";
 import PasswordGenerator from "./components/PasswordGenerator";
 import Counter from "./counter";
+import useCurrencyInfo from "./hooks/useCurrencyInfo";
+import CurrencyConverter from "./components/CurrencyConverter";
 
 function App() {
+  const data = useCurrencyInfo("usd");
   // const username = "venom"
 
   // const [count, setCount] = useState(0);
@@ -32,6 +35,7 @@ function App() {
       <Card username="Venom" /> */}
 
       {/* <PasswordGenerator /> */}
+      <CurrencyConverter />
     </>
   );
 }
