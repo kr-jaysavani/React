@@ -3,6 +3,7 @@ import Card from "./components/Card";
 import ThemeBtn from "./components/ThemeBtn";
 import { ThemeProvider } from "./contexts/theme";
 import { useState } from "react";
+import Cmp1 from "./components/Cmp1";
 
 function App() {
   const [themeMode, setThemeMode] = useState("light");
@@ -19,7 +20,7 @@ function App() {
   return (
     <>
       {/* remember to change in tailwind.config */}
-      <ThemeProvider value={{ themeMode, changeTheme }}>
+      {/* <ThemeProvider value={{ themeMode, changeTheme }}>
         <div className="flex flex-wrap min-h-screen items-center">
           <div className="w-full">
             <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
@@ -31,7 +32,8 @@ function App() {
             </div>
           </div>
         </div>
-      </ThemeProvider>
+      </ThemeProvider> */}
+      <Cmp1 />
     </>
   );
 }
