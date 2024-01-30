@@ -36,20 +36,22 @@
 // }
 
 import { useState, useEffect, useCallback } from "react";
-import ReactDOM from "react-dom/client";
 import Todos from "./Todos";
 
 const App = () => {
+  console.log("Render App");
   const [count, setCount] = useState(0);
-  console.log("🚀 ~ App ~ count:", count)
   const [todos, setTodos] = useState([]);
 
   const increment = () => {
     setCount((c) => c + 1);
   };
-  // const addTodo = useCallback(() => {
+  const addTodo = useCallback(() => {
+    setTodos((t) => [...t, "New Todo"]);
+  }, [todos]);
+  //  {
   //   setTodos((t) => [...t, "New Todo"]);
-  // }, [todos]);
+  // };
 
   // useEffect(() => {
   //   setTodos((t) => [...t, "New Todo"]);
@@ -57,7 +59,7 @@ const App = () => {
 
   return (
     <>
-      <Todos todos={todos} setTodos={setTodos} />
+      <Todos todos={todos} addTodo={addTodo} />
       <hr />
       <div>
         Count: {count}
