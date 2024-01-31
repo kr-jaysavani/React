@@ -22,7 +22,7 @@ function InputBox({
           >
             {label}
           </label>
-          <input  
+          <input
             id={amountInputId}
             className="outline-none w-full bg-transparent py-1.5"
             type="number"
