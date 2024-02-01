@@ -12,8 +12,8 @@ function App() {
   const [to, setTo] = useState("AVA");
   const [convertedAmount, setConvertedAmount] = useState(0);
 
-  const [showModal, setShowModal] = useState(false);
-  const [inputToUpdate, setInputToUpdate] = useState("from");
+  // const [showModal, setShowModal] = useState(false);
+  // const [inputToUpdate, setInputToUpdate] = useState("from");
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
 

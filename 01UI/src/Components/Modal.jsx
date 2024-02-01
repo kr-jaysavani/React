@@ -108,7 +108,7 @@ export default function Modal({
                 ))}
               </div>
               <hr className="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700" />
-              <div className="rounded-2xl p-4 mt-3 border border-blue-200">
+              <div className="overflow-y-auto rounded-2xl p-4 mt-3 border border-blue-200 h-56">
                 {showingval &&
                   showingval.map((value) => (
                     <div
@@ -155,7 +155,7 @@ export default function Modal({
           </div>
         </div>
       </div>
-      {/* <div className="opacity-25 fixed inset-0 z-40 bg-black"></div> */}
+      <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
     </>
   );
 }
