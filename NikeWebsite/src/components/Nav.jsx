@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { headerLogo } from "../assets/images";
 import { hamburger } from "../assets/icons";
 import { navLinks } from "../constants";
 
 const Nav = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="padding-x py-8 z-10 absolute w-full">
-      <nav className="flex justify-between items-center max-container">
+    <header
+      className={`${
+        scrolled ? "bg-slate-300 " : ""
+      } fixed padding-x py-8 z-20 w-full`}
+    >
+      <nav className=" flex justify-between items-center max-container">
         <a href="/">
           <img src={headerLogo} alt="Logo" width={130} height={29} />
         </a>
@@ -24,8 +46,6 @@ const Nav = () => {
         </ul>
         <div className="flex gap-2 text-lg leading-normal font-medium font-montserrat max-md:block  wide:mr-24">
           <a href="/">Sign in</a>
-          <span>/</span>
-          <a href="/">Explore now</a>
         </div>
         <div className="hidden max-lg:block">
           <img src={hamburger} alt="hamburger icon" width={25} height={25} />

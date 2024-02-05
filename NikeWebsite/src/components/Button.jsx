@@ -1,8 +1,15 @@
 import { arrowRight } from "../assets/icons";
 
-const Button = ({ label, iconURL }) => {
+const Button = ({
+  label,
+  iconURL,
+  textcolor = "text-white",
+  className = "",
+}) => {
   return (
-    <button className="flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none bg-coral-red rounded-full text-white border-coral-red">
+    <button
+      className={`${className}  flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none bg-coral-red rounded-full  border-coral-red  ${textcolor}`}
+    >
       {label}
       {iconURL && (
         <img
